@@ -10,7 +10,7 @@ const authRoutes = require('./routes/auth');
 function setupServer () {
   const app = express();
   const server = http.createServer(app);
-  const io = socketio(server);
+  //const io = socketio(server);
 
   //middleware
   app.use(express.static(path.resolve(__dirname, '../client/build')));
