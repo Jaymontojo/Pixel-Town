@@ -1,13 +1,14 @@
 {
   "name": "chat-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
     "concurrent": "concurrently \"npm run dev\" \"cd client && npm start\"",
-    "build": "cd client && npm install && npm run build"
+    "build": "cd client && npm install && npm run build",
+    "release": "standard-version"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "concurrently": "^7.4.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "standard-version": "^9.5.0"
   }
 }
