@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "dev": "nodemon server/index.js"
+    "dev": "nodemon server/index.js",
+    "concurrent": "concurrently \"npm run dev\" \"cd client && npm start\"",
+    "build": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "socket.io": "^4.5.2"
   },
   "devDependencies": {
+    "concurrently": "^7.4.0",
     "nodemon": "^2.0.20"
   }
 }
