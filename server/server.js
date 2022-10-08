@@ -4,6 +4,7 @@ const path = require('path');
 const socketio = require('socket.io');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const userRoutes = require('./routes/users');
 
 function setupServer () {
   const app = express();
@@ -11,10 +12,11 @@ function setupServer () {
   const io = socketio(server);
 
   //middleware
+  app.use(express.static(path.resolve(__dirname, '../client/build')));
   app.use(express.json());
   app.use(helmet());
   app.use(morgan('common'));
-  app.use(express.static(path.resolve(__dirname, '../client/build')));
+  app.use('/api/users', userRoutes);
 
   // io.on('connection', socket => {
   //   console.log('New Web Socket Connection', socket);
