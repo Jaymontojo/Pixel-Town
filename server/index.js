@@ -1,11 +1,11 @@
 const setupServer = require('./server');
 const PORT = process.env.PORT || 3000;
 
-const app = setupServer();
+const server = setupServer();
 
 (async () => {
   try {
-    app.listen(PORT, () => {
+    server.listen(PORT, () => {
       console.log(`app is listening @ ${PORT}`);
     });
   } catch (err) {
