@@ -4,7 +4,7 @@ import './login.css';
 export default function Login() {
   return (
     <div className='login'>
-      <login className='login-wrapper'>
+      <div className='login-wrapper'>
         <div className='login-left'>
           <h3 className='logo-title'>J-Chat</h3>
           <span className='logo-subtitle'>
@@ -29,7 +29,7 @@ export default function Login() {
             <button className='login-register-button'>Create a New Account</button>
           </form>
         </div>
-      </login>
+      </div>
     </div>
   )
 }
