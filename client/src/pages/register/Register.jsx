@@ -12,12 +12,43 @@ export default function Register() {
         </div>
         <div className='register-right'>
           <form className='register-form'>
-            <input type='text' className='register-input' placeholder="Username" required/>
-            <input type='email' className='register-input' placeholder="Email" required/>
-            <input type='password' className='register-input' placeholder="Password" required/>
-            <input type='password' className='register-input' placeholder="Confirm Password" required/>
-            <button className='register-button'>Sign Up</button>
-            <button className='register-login-button'>Already Have an Account?</button>
+            <input 
+              type='text'
+              className='register-input'
+              placeholder="Username"
+              minLength='3'
+              maxLength='20'
+              required
+            />
+            <input 
+              type='email'
+              className='register-input'
+              placeholder="Email"
+              maxLength='50'
+              required
+            />
+            <input 
+              type='password'
+              className='register-input'
+              placeholder="Password"
+              minLength='8'
+              required
+            />
+            <input
+              type='password'
+              className='register-input'
+              placeholder="Confirm Password"
+              minLength='8'
+              required
+            />
+            <button
+              className='register-button'
+            >Sign Up
+            </button>
+            <button
+              className='register-login-button'
+            >Already Have an Account?
+            </button>
           </form>
         </div>
       </div>
