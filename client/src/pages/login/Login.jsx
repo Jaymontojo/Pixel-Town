@@ -8,7 +8,7 @@ export default function Login() {
         <div className='login-left'>
           <h3 className='logo-title'>J-Chat</h3>
           <span className='logo-subtitle'>
-            The only way to chat
+          The only way to chat
           </span>
         </div>
         <div className='login-right'>
