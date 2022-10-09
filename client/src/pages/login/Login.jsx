@@ -1,14 +1,23 @@
-import { useRef } from "react";
+import { useRef } from 'react';
 import './login.css';
+import { loginCall } from '../../apiCalls';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import { CircularProgress } from '@mui/material';
 
 export default function Login() {
   const email = useRef(null);
   const password = useRef(null);
+  const {isFetching, dispatch} = useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
-    // console.log(email.current.value, password.current.value);
+    loginCall({ 
+      email: email.current.value,
+      password: password.current.value
+    }, dispatch)
   }
+
   return (
     <div className='login'>
       <div className='login-wrapper'>
@@ -25,7 +34,7 @@ export default function Login() {
               className='login-input' 
               placeholder="email"
               ref={ email }
-              maxLength="50"
+              maxLength='50'
               required
             />
             <input 
@@ -33,11 +42,32 @@ export default function Login() {
               className='login-input'
               placeholder="Password"
               ref={ password }
-              minLength="8"
+              minLength='8'
               required
             />
-            <button type='submit' className='login-button'>Log In</button>
-            <button className='login-register-button'>Create a New Account</button>
+            <button 
+              type='submit'
+              className='login-button'
+              disabled={ isFetching }
+            >
+              {isFetching
+                ? <CircularProgress 
+                  style={{ 'color' : 'white' }} 
+                  size='16px'/>
+                : "Log In"
+              }
+            </button>
+            <button 
+              className='login-register-button'
+              disabled={ isFetching }
+            >
+              { isFetching
+                ? <CircularProgress 
+                  style={{ 'color' : 'white' }} 
+                  size="16px"/>
+                : "Create a New Account"
+              }
+            </button>
           </form>
         </div>
       </div>
