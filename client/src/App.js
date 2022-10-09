@@ -7,16 +7,16 @@ import {
 } from "react-router-dom";
 
 function App() {
-  return <Login/>
-  // return (
-  //   <Router>
-  //     <Routes>
-  //       <Route exact path="/" element={ <h1>Home</h1> }></Route>
-  //       <Route path="/login" element={ <Login/> }></Route>
-  //       <Route path="/register" element={ <Register/> }></Route>
-  //     </Routes>
-  //   </Router>
-  // )
+  //return <Login/>
+  return (
+    <Router>
+      <Routes>
+        <Route exact path="/" element={ <h1>Home</h1> }></Route>
+        <Route path="/login" element={ <Login /> }></Route>
+        <Route path="/register" element={ <Register /> }></Route>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
