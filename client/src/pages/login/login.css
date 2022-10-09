@@ -1,0 +1,80 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrapper {
+  width: 85%;
+  height: 85%;
+  display: flex;
+}
+
+.login-left, .login-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-title {
+  margin: 0 0 8px 0;
+  text-align: center; /*might remove*/
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: crimson;
+}
+
+.logo-subtitle {
+  text-align: center; /*might remove*/
+  font-size: 1.5rem;
+  color: crimson;
+}
+
+.login-form {
+  height: 300px;
+  padding: 20px;
+  border-radius: 8px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(240, 128, 128, 0.432);
+}
+
+.login-input {
+  height: 50px;
+  padding: 0 0 0 20px; 
+  border-radius: 8px;
+  border: 1px solid lightgrey;
+  font-style: 1rem;
+}
+
+.login-input:focus {
+  outline: none;
+}
+
+.login-button {
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background-color: lightblue;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+}
+.login-button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.login-register-button {
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(60, 165, 60);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
