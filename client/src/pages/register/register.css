@@ -61,7 +61,8 @@
   border: none;
   background-color: lightblue;
   color: black;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -76,6 +77,11 @@
   border-radius: 8px;
   background-color: rgb(60, 165, 60);
   color: white;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
+}
+
+.register-button:disabled, .register-login-button:disabled {
+  cursor: not-allowed;
 }

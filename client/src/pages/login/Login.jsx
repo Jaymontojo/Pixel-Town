@@ -30,7 +30,10 @@ export default function Login() {
           </span>
         </div>
         <div className='login-right'>
-          <form className='login-form' onSubmit={ handleLogin }>
+          <form 
+            className='login-form'
+            onSubmit={ handleLogin }
+          >
             <input 
               type='email'
               className='login-input' 
