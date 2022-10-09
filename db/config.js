@@ -3,12 +3,11 @@ const mongoose = require('mongoose');
 dotenv.config();
 
 const connectDb = () => {
-  return mongoose.connect(process.env.MONGOOSE_URL, 
+  return mongoose.connect(process.env.MONGO_URL, 
     { useNewUrlParser: true, useUnifiedTopology: true }, 
-    () => {
-    console.log("Connected to MongoDB")
-    }
-  );
+  )
+  .then(()=>console.log('App is connected to MongoDB Atlas'))
+  .catch(e=>console.log(e));
 };
 
 module.exports = connectDb;

@@ -8,10 +8,10 @@ const server = setupServer();
   try {
     connectDb();
     server.listen(PORT, () => {
-      console.log(`app is listening @ ${PORT}`);
+      console.log(`Server is listening on Port ${PORT}`);
     });
   } catch (err) {
-    console.error(`app failed to start ${err}`);
+    console.error(`Server failed to start ${err}`);
   }
 })();
 
