@@ -1,0 +1,33 @@
+.messenger {
+  height: 100vh;
+  display: flex;
+} 
+
+.chat-menu {
+  flex: 3.5;
+  background-color: aqua;
+}
+
+.chat-menu-search {
+  width: 90%;
+  padding: 8px 0 0 0 ;
+  border: none;
+  background-color: aqua;
+  border-bottom: 1px solid lightgray;
+}
+
+.chat-box {
+  flex: 5.5;
+  background-color: coral;
+}
+.chat-online {
+  flex: 3;
+  background-color: rgb(250, 250, 58);
+}
+
+.chat-menu-wrapper, 
+.chat-box-wrapper, 
+.chat-online-wrapper {
+  padding: 16px;
+}
+
