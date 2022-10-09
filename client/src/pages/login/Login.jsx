@@ -1,14 +1,15 @@
-import { useRef } from 'react';
 import './login.css';
+import { useRef, useContext } from 'react';
 import { loginCall } from '../../apiCalls';
-import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 
 export default function Login() {
+  const navigate = useNavigate();
   const email = useRef(null);
   const password = useRef(null);
-  const {isFetching, dispatch} = useContext(AuthContext);
+  const {user, isFetching, dispatch} = useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -18,6 +19,7 @@ export default function Login() {
     }, dispatch)
   }
 
+  if (user) return navigate('/');
   return (
     <div className='login'>
       <div className='login-wrapper'>
@@ -59,6 +61,9 @@ export default function Login() {
             </button>
             <button 
               className='login-register-button'
+              onClick={() => {
+                navigate('/register');
+              }}
               disabled={ isFetching }
             >
               { isFetching
