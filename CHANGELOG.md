@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Jaymontojo/J-chat/compare/v1.2.0...v1.3.0) (2022-10-09)
+
+
+### Features
+
+* add login page & basic styling ([29d8b6e](https://github.com/Jaymontojo/J-chat/commit/29d8b6e60e665a9528b1054a4d0d470568cec45a))
+* add register page & basic styling ([06eaee3](https://github.com/Jaymontojo/J-chat/commit/06eaee3f1a56fc22cf313b20828d2e2350ea22b2))
+* implement user login route ([b4280ba](https://github.com/Jaymontojo/J-chat/commit/b4280ba0a40eee6bb7007561f442cf65c77f3d81))
+
+
+### Bug Fixes
+
+* add clearer error handling for auth routes ([78a8456](https://github.com/Jaymontojo/J-chat/commit/78a8456f0a6fe641d2c37445a7753e8e26e63289))
+
 ## [1.2.0](https://github.com/Jaymontojo/J-chat/compare/v1.1.0...v1.2.0) (2022-10-09)
 
 
