@@ -4,7 +4,7 @@
 } 
 
 .chat-menu {
-  flex: 3.5;
+  flex: 2;
   background-color: aqua;
 }
 
@@ -17,9 +17,44 @@
 }
 
 .chat-box {
-  flex: 5.5;
+  flex: 8;
   background-color: coral;
 }
+
+.chat-box-wrapper {
+  height: 94%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat-box-top {
+  overflow-y: scroll;
+  padding: 0 8px 0 0;
+}
+.chat-box-bottom {
+  margin: 8px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-box-textarea {
+  width: 80%;
+  width: 90%;
+  padding: 8px;
+  border: none;
+}
+
+.chat-box-submit {
+  width: 70px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: brown;
+  color: aliceblue;
+}
+
 .chat-online {
   flex: 3;
   background-color: rgb(250, 250, 58);

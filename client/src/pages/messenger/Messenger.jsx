@@ -20,12 +20,15 @@ export default function messenger() {
           <div className='chat-box-top'>
             <Message currentUser={true}/>
             <Message currentUser={false}/>
+            <Message currentUser={true}/>
+            <Message currentUser={false}/>
+            <Message currentUser={true}/>
           </div>
-          <div className='chat-box-bottom'></div>
+          <div className='chat-box-bottom'>
+            <textarea className='chat-box-textarea' placeholder='Type your message here...'></textarea>
+            <button className='chat-box-submit'>Send</button>
+          </div>
         </div>
-      </div>
-      <div className='chat-online'>
-        <div className='chat-online-wrapper'></div>
       </div>
     </div>
   )
