@@ -1,0 +1,40 @@
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-top {
+  display: flex;
+  align-items: center;
+}
+
+.message-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: blue;
+  object-fit: cover;
+}
+
+.message-text {
+  padding: 8px;
+  margin: 24px 0 0 8px;
+  border-radius: 16px;
+  background-color: lightblue;
+  max-width: 250px;
+  word-wrap: break-word;
+}
+
+.message-bottom {
+  font-size: .5rem;
+  color: lightgray;
+}
+
+.message.currentUser {
+  align-items: flex-end;
+}
+
+.message.currentUser .message-text{
+  background-color: black;
+  color: white
+}

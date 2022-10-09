@@ -1,5 +1,6 @@
 import './messenger.css'
 import Conversation from '../../components/conversation/Conversation';
+import Message from '../../components/message/Message';
 
 export default function messenger() {
   return (
@@ -15,7 +16,13 @@ export default function messenger() {
         </div>
       </div>
       <div className='chat-box'>
-        <div className='chat-box-wrapper'></div>
+        <div className='chat-box-wrapper'>
+          <div className='chat-box-top'>
+            <Message currentUser={true}/>
+            <Message currentUser={false}/>
+          </div>
+          <div className='chat-box-bottom'></div>
+        </div>
       </div>
       <div className='chat-online'>
         <div className='chat-online-wrapper'></div>
