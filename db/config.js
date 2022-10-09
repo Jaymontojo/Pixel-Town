@@ -7,7 +7,7 @@ const connectDb = () => {
     { useNewUrlParser: true, useUnifiedTopology: true }, 
   )
   .then(()=>console.log('App is connected to MongoDB Atlas'))
-  .catch(e=>console.log(e));
+  .catch((err) => console.log(err));
 };
 
 module.exports = connectDb;
