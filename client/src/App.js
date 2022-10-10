@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={ <Register /> }></Route>
         <Route path="/login" element={ <Login /> }></Route>
-        <Route path="/register" element={ <Register /> }></Route>
+        {/* <Route path="/register" element={ <Register /> }></Route> */}
         <Route path="/messenger" element={ <Messenger /> }></Route>messenger
       </Routes>
     </Router>

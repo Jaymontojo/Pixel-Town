@@ -62,8 +62,10 @@ export default function Login() {
             </button>
             <button 
               className='login-register-button'
-              onClick={() => {
-                navigate('/register');
+              onClick={(event) => {
+                event.preventDefault();
+                window.alert("Sorry this feature is still WIP 🚧🙇🏻‍♂️🚧")
+                //navigate('/register');
               }}
               disabled={ isFetching }
             >
