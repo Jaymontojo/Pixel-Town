@@ -6,6 +6,8 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const userRoutes = require('./routes/users');
 const authRoutes = require('./routes/auth');
+const conversationRoutes = require('./routes/conversations');
+const messageRoutes = require('./routes/messages');
 
 function setupServer () {
   const app = express();
@@ -19,6 +21,8 @@ function setupServer () {
   app.use(morgan('common'));
   app.use('/api/users', userRoutes);
   app.use('/api/auth', authRoutes);
+  app.use('/api/conversations', conversationRoutes);
+  app.use('/api/messages', messageRoutes);
 
   // io.on('connection', socket => {
   //   console.log('New Web Socket Connection', socket);
