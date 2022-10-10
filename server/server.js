@@ -1,7 +1,7 @@
 const express = require('express');
 const http = require('http');
 const path = require('path');
-const socketio = require('socket.io');
+const { Server } = require('socket.io');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const userRoutes = require('./routes/users');
@@ -12,7 +12,7 @@ const messageRoutes = require('./routes/messages');
 function setupServer () {
   const app = express();
   const server = http.createServer(app);
-  //const io = socketio(server);
+  const io = new Server(server);
 
   //middleware
   app.use(express.static(path.resolve(__dirname, '../client/build')));
@@ -24,9 +24,9 @@ function setupServer () {
   app.use('/api/conversations', conversationRoutes);
   app.use('/api/messages', messageRoutes);
 
-  // io.on('connection', socket => {
-  //   console.log('New Web Socket Connection', socket);
-  // })
+  io.on('connection', (socket) => {
+    console.log('New Web Socket Connection', socket);
+  });
 
   app.get('/api/hello', (req, res) => {
     res.json({ message: "Hello from server!" }).status(200);
