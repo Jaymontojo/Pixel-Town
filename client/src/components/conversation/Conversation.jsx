@@ -22,10 +22,10 @@ export default function Conversation({ conversation, currentUser }) {
 
   return (
     <div className='conversation'>
-      <img 
+      {/* <img 
         className='conversation-img' 
         src={ friend?.avatar } 
-        alt='' />
+        alt='' /> */}
       <span 
         className='conversation-name'
       >

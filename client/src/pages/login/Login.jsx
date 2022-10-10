@@ -45,7 +45,7 @@ export default function Login() {
               className='login-input'
               placeholder="Password"
               ref={ password }
-              minLength='8'
+              minLength='6'
               required
             />
             <button 

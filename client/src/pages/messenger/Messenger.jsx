@@ -99,7 +99,7 @@ export default function Messenger() {
     <div className='messenger'>
       <div className='conversations-menu'>
         <div className='conversations-menu-wrapper'>
-          <h1 className='conversations-menu-title'>Friends List</h1>
+          <h1 className='conversations-menu-title'>Conversations</h1>
             {conversations.map((conversation) => {
               return (
                 <div onClick = {() => {
