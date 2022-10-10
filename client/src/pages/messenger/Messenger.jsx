@@ -1,16 +1,18 @@
 import './messenger.css'
 import Conversation from '../../components/conversation/Conversation';
 import Message from '../../components/message/Message';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useRef } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
 
 export default function Messenger() {
   const { user } = useContext(AuthContext);
+
   const [conversations, setConversations] = useState([]);
   const [currentConversation, setCurrentConversation] = useState(null);
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
+  const scrollRef = useRef();
 
   useEffect(() => {
     const fetchConversations = async () => {
@@ -34,7 +36,11 @@ export default function Messenger() {
       }
     }
     fetchMessages();
-  },[currentConversation])
+  },[currentConversation]);
+
+  useEffect(() => {
+    scrollRef.current?.scrollIntoView({ behavior : 'smooth', block: 'end'});
+  },[messages])
 
   const handleSend = async (event) => {
     event.preventDefault();
@@ -52,7 +58,6 @@ export default function Messenger() {
     }
   }
 
-  //  if (!user._id) return navigate('/register');
   return (
     <div className='messenger'>
       <div className='chat-menu'>
@@ -66,6 +71,7 @@ export default function Messenger() {
                   <Conversation 
                     conversation={ conversation }
                     currentUser={ user }
+                    key={conversation._id}
                   />
                 </div>
               );
@@ -77,12 +83,15 @@ export default function Messenger() {
           {currentConversation 
             ? <>
               <div className='chat-box-top'>
-                {messages.map((message) => {
-                  return <Message 
-                    message={ message }
-                    currentUser={ message.senderId === user._id}
-                  />
-                })}
+                <div ref={ scrollRef }>
+                  {messages.map((message) => {
+                    return <Message 
+                      message={ message }
+                      key={ message._id}
+                      currentUser={ message.senderId === user._id}
+                    />
+                  })}
+                </div>
               </div>
               <div className='chat-box-bottom'>
                 <textarea 
