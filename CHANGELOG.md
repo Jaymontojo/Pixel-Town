@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/Jaymontojo/J-chat/compare/v1.8.0...v1.9.0) (2022-10-10)
+
+
+### Features
+
+* add text family ([c23d95e](https://github.com/Jaymontojo/J-chat/commit/c23d95ee02e22e07bb5fd4b3eef511db32c51c64))
+* finalize stylings ([065806d](https://github.com/Jaymontojo/J-chat/commit/065806dd7c610482f6fbb405522ce04f41e2997f))
+* update conversation styles ([354684a](https://github.com/Jaymontojo/J-chat/commit/354684a734fe1d5b6762accf91b744695a065422))
+* update login styles ([77c55f6](https://github.com/Jaymontojo/J-chat/commit/77c55f6478b3be85eccd1ff9c0bef25c8cc469be))
+* update message styles ([c9698df](https://github.com/Jaymontojo/J-chat/commit/c9698df52583c4bb323d9db6cd7022af93e6b50f))
+* update messagenger styles ([d6c5e1b](https://github.com/Jaymontojo/J-chat/commit/d6c5e1b8979e297613cc4b44c1cff43427919797))
+* update stylings for messeges ([ff4913a](https://github.com/Jaymontojo/J-chat/commit/ff4913a3500ffab5379c03d502d862bfb7a67880))
+
+
+### Bug Fixes
+
+* implement fixes for socket connection. ([5836d91](https://github.com/Jaymontojo/J-chat/commit/5836d91093722b85cb44f55ef2af7409838d5613))
+* socket server address for deployment ([b9a48ea](https://github.com/Jaymontojo/J-chat/commit/b9a48ea34f1a34dab62cbcdd4f709f25e14ab188))
+* temporarily disable register page ([b4719ba](https://github.com/Jaymontojo/J-chat/commit/b4719ba760003736ce5acb8866dc8ea0cd7f31ad))
+* temporarily disable register page ([ba0b340](https://github.com/Jaymontojo/J-chat/commit/ba0b3401a2b17e3c9b184bb932062a9e7f59532a))
+* temporarily disable register page ([3af09a8](https://github.com/Jaymontojo/J-chat/commit/3af09a8bc12592450afcb4b2b1c24ce6ae60d014))
+
 ## [1.8.0](https://github.com/Jaymontojo/J-chat/compare/v1.7.0...v1.8.0) (2022-10-10)
 
 
