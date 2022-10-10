@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Jaymontojo/J-chat/compare/v1.5.0...v1.6.0) (2022-10-10)
+
+
+### Features
+
+* implement Conversation FE component fetch logic ([96a8755](https://github.com/Jaymontojo/J-chat/commit/96a8755a0c8d8f915444d2d2bceb1bfce8f2f637))
+* implement find user by userId or username ([20635d1](https://github.com/Jaymontojo/J-chat/commit/20635d109f412623637c7e7b85edd7e066d1067d))
+
+
+### Bug Fixes
+
+* Fix bug in conversations route ([2f10308](https://github.com/Jaymontojo/J-chat/commit/2f10308c21f85fa5cf73f3695cbca852fc0ecd0d))
+* remove navigation to clean up error ([4deecc8](https://github.com/Jaymontojo/J-chat/commit/4deecc84dc848cdd2d9c54a440270a6e53b43934))
+
 ## [1.5.0](https://github.com/Jaymontojo/J-chat/compare/v1.4.0...v1.5.0) (2022-10-10)
 
 
