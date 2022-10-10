@@ -144,7 +144,7 @@ export default function Messenger() {
                 >Send</button>
               </div>
             </>
-            : <span className='chat-null-span'>Open a conversation!</span>
+            : <span className='chat-null-span'>Open a Conversation!</span>
           }
         </div>
       </div>

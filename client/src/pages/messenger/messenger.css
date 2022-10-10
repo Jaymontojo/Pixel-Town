@@ -26,6 +26,10 @@
   color: aliceblue;
 }
 
+.trade-mark {
+  color: aliceblue;
+}
+
 .chat-box {
   flex: 8;
   background-image: url('../../../public/assets/message-container-bg.gif');
@@ -100,11 +104,13 @@
 }
 
 .chat-null-span {
-  top: 25%;
+  bottom: 28%;
+  left: 21%;
   position: absolute;
   margin: 16px;
   text-align: center;
   font-size: 4rem;
-  color: aliceblue;
+  font-weight: 700;
+  color: black;
   cursor: default;
 }
