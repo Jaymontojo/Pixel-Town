@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Jaymontojo/J-chat/compare/v1.4.0...v1.5.0) (2022-10-10)
+
+
+### Features
+
+* add Conversation mongoose model ([f2ee3c5](https://github.com/Jaymontojo/J-chat/commit/f2ee3c583d704fa35c2795eba4125ae29c42684c))
+
 ## [1.4.0](https://github.com/Jaymontojo/J-chat/compare/v1.3.0...v1.4.0) (2022-10-09)
 
 
