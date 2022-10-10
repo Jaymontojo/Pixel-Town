@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/Jaymontojo/J-chat/compare/v1.7.0...v1.8.0) (2022-10-10)
+
+
+### Features
+
+* implement instant scroll focus for new messages ([99d7ccc](https://github.com/Jaymontojo/J-chat/commit/99d7ccc5659333c475244917411114a9881519e9))
+* implement socket events for messages ([936e85c](https://github.com/Jaymontojo/J-chat/commit/936e85c08c3ce586cde4790bc4073be384b8b17b))
+* initialize socket config in express server ([808bde7](https://github.com/Jaymontojo/J-chat/commit/808bde74a6787389aed17ea66c319f11947fc602))
+
 ## [1.7.0](https://github.com/Jaymontojo/J-chat/compare/v1.6.0...v1.7.0) (2022-10-10)
 
 
