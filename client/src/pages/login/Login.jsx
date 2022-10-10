@@ -19,7 +19,7 @@ export default function Login() {
     }, dispatch)
   }
 
-  if (user) return navigate('/');
+  if (user) return navigate('/messenger');
   return (
     <div className='login'>
       <div className='login-wrapper'>
