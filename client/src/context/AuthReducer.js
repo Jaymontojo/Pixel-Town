@@ -1,5 +1,4 @@
 const AuthReducer = ( state, action ) => {
-  console.log('action', action)
   switch(action.type) {
     case "AUTH_START":
       return {
