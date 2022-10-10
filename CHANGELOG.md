@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/Jaymontojo/J-chat/compare/v1.9.0...v1.10.0) (2022-10-10)
+
+
+### Features
+
+* finalize stylings ([d494d92](https://github.com/Jaymontojo/J-chat/commit/d494d92586fbc33cf6479c12777508603f33a873))
+
+
+### Bug Fixes
+
+* fix background fittings ([655b31d](https://github.com/Jaymontojo/J-chat/commit/655b31dd0197437f6a625164f20a6f81baf8197d))
+
 ## [1.9.0](https://github.com/Jaymontojo/J-chat/compare/v1.8.0...v1.9.0) (2022-10-10)
 
 
