@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/Jaymontojo/J-chat/compare/v1.6.0...v1.7.0) (2022-10-10)
+
+
+### Features
+
+* implement dynamic data in Message.jsx ([d851cb7](https://github.com/Jaymontojo/J-chat/commit/d851cb716d84e27242d9e379e3b6d96d843e20bc))
+* implement network requests for conversations & messages in main app. ([af1609f](https://github.com/Jaymontojo/J-chat/commit/af1609f47a9901169cf678a08b925413e9c4662f))
+
+
+### Bug Fixes
+
+* fix render bug in Conversation.js ([a8ad07d](https://github.com/Jaymontojo/J-chat/commit/a8ad07d75934beeed0aa8f3d83506dc98812b622))
+
 ## [1.6.0](https://github.com/Jaymontojo/J-chat/compare/v1.5.0...v1.6.0) (2022-10-10)
 
 
