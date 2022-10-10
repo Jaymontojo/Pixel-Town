@@ -24,12 +24,10 @@ export default function Login() {
     <div className='login'>
       <div className='login-wrapper'>
         <div className='login-left'>
-          <h3 className='logo-title'>J-Chat</h3>
-          <span className='logo-subtitle'>
-          The only way to chat
-          </span>
         </div>
         <div className='login-right'>
+          <h3 className='login-logo-title'>Pixel Town</h3>
+
           <form 
             className='login-form'
             onSubmit={ handleLogin }
@@ -37,7 +35,7 @@ export default function Login() {
             <input 
               type='email'
               className='login-input' 
-              placeholder="email"
+              placeholder="Email"
               ref={ email }
               maxLength='50'
               required
@@ -71,8 +69,8 @@ export default function Login() {
             >
               { isFetching
                 ? <CircularProgress 
-                  style={{ 'color' : 'white' }} 
-                  size="16px"/>
+                  style={{ 'color' : 'black' }} 
+                  size="24px"/>
                 : "Create a New Account"
               }
             </button>

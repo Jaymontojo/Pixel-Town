@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('../../../public/assets/login-page-bg.gif');
 }
 
 .login-wrapper {
@@ -19,66 +20,78 @@
   justify-content: center;
 }
 
-.logo-title {
-  margin: 0 0 8px 0;
-  text-align: center; /*might remove*/
-  font-size: 3.5rem;
+.login-logo-title {
+  border-top-left-radius: 8px; 
+  border-top-right-radius: 8px; 
+  text-align: center;
+  font-size: 5rem;
   font-weight: 800;
-  color: crimson;
-}
-
-.logo-subtitle {
-  text-align: center; /*might remove*/
-  font-size: 1.5rem;
-  color: crimson;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.432);
 }
 
 .login-form {
-  height: 300px;
+  height: 500px;
   padding: 20px;
-  border-radius: 8px; 
+  border-bottom-left-radius: 8px; 
+  border-bottom-right-radius: 8px; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: rgba(240, 128, 128, 0.432);
+  background: rgba(0, 0, 0, 0.432);
 }
 
 .login-input {
-  height: 48px;
+  height: 8vh;
+  margin:  24px 0 24px 0 ; 
   padding: 0 0 0 20px; 
   border-radius: 8px;
   border: 1px solid lightgrey;
-  font-style: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  outline: none;
 }
 
 .login-input:focus {
   outline: none;
+  background: transparent;
+}
+
+.login-input::placeholder {
+  opacity: 85%;
+  color: aliceblue;
 }
 
 .login-button {
-  height: 48px;
+  height: 8vh;
+  margin: 48px 0 24px 0;
   border: none;
   border-radius: 8px;
-  background-color: lightblue;
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: aliceblue;
   color: black;
+}
+
+.login-register-button {
+  height: 6vh;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0);
+  color: white;
   font-weight: 700;
   font-size: 1.5rem;
   cursor: pointer;
 }
-.login-button:hover {
-  background-color: blue;
-  color: white;
-}
 
-.login-register-button {
-  height: 48px;
-  border: none;
-  border-radius: 8px;
-  background-color: rgb(60, 165, 60);
-  color: white;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
+.login-register-button:hover {
+  border: 5px solid aliceblue;
+  color: aliceblue;
 }
 
 .login-button:disabled, .login-register-button:disabled {
