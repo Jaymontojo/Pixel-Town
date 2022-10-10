@@ -24,12 +24,12 @@ export default function Conversation({ conversation, currentUser }) {
     <div className='conversation'>
       <img 
         className='conversation-img' 
-        src={ friend.avatar } 
+        // src={ friend?.avatar } 
         alt='' />
       <span 
         className='conversation-name'
       >
-        { friend.username }
+        { friend?.username }
       </span>
     </div>
   )
