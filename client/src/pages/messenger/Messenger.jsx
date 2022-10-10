@@ -13,7 +13,7 @@ export default function Messenger() {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
   const [incomingMessage, setIncomingMessage] = useState("");
-  const ENDPOINT = 'https://rpg-messenger.herokuapp.com'||'ws://localhost:3000';
+  const ENDPOINT = 'https://pixel-town.herokuapp.com/'||'ws://localhost:3000';
   const scrollRef = useRef();
   const socket = useRef();
 
