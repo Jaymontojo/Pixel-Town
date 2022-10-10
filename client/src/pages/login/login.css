@@ -4,11 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: black;
   background-image: url('../../../public/assets/login-page-bg.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .login-wrapper {
-  width: 85%;
+  width: 65%;
   height: 85%;
   display: flex;
 }
