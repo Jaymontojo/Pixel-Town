@@ -1,24 +1,26 @@
 .conversation {
+  padding: 5%;
   display: flex;
   align-items: center;
-  margin: 8% 0 0 0;
-  padding: 4%;
   cursor: pointer;
 }
 
 .conversation:hover {
-  background-color: white;
+  border: 5px solid aliceblue;
+  border-radius: 8px;
+  color: rgb(39, 48, 48);
 }
 
 .conversation-img {
-  width: 12%;
-  height: 8%;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background-color: blue;
   object-fit: cover;
 }
 
 .conversation-name {
   margin: 0 0 0 5%;
   font-weight: 700;
+  font-size: 2.5rem;
+  color: aliceblue;
 }
