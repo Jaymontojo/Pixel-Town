@@ -1,5 +1,5 @@
 import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
+// import Register from "./pages/register/Register";
 import Messenger from "./pages/messenger/Messenger";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
