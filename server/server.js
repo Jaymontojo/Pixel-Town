@@ -24,8 +24,35 @@ function setupServer () {
   app.use('/api/conversations', conversationRoutes);
   app.use('/api/messages', messageRoutes);
 
+  const users = []
+  const connectUser = (userId, socketId) => {
+    !users.some( user => user.userId === userId) &&
+      users.push({ userId, socketId });
+  };
+
+  const disconnectUser = (socketId) => {
+    users = users.filter(user => user.socketId !== socketId);
+  };
+
+  const getUser = (receiverId) => {
+    return users.find(user => user.userId === receiverId)
+  }
   io.on('connection', (socket) => {
-    console.log('New Web Socket Connection', socket);
+    console.log("New Web Socket Connection");
+
+    socket.on('connectUser', (userId) => {
+      connectUser(userId, socket.id);
+      io.emit('getUsers', users);
+    });
+
+    socket.on('sendMessage', ({ senderId, receiverId, content}) => {
+      const user = getUser(receiverId);
+      io.to(user.socketId).emit('getMessage', {senderId, content});
+    })
+
+    socket.on('disconnect', () => {
+      console.log("A user has been disconnected")
+    })
   });
 
   app.get('/api/hello', (req, res) => {

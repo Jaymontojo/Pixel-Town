@@ -1,9 +1,10 @@
-import './messenger.css'
+import axios from 'axios';
+import { useState, useEffect, useContext, useRef } from 'react';
+import { io } from 'socket.io-client';
+import './messenger.css';
 import Conversation from '../../components/conversation/Conversation';
 import Message from '../../components/message/Message';
-import { useState, useEffect, useContext, useRef } from 'react';
 import { AuthContext } from '../../context/AuthContext';
-import axios from 'axios';
 
 export default function Messenger() {
   const { user } = useContext(AuthContext);
@@ -12,7 +13,33 @@ export default function Messenger() {
   const [currentConversation, setCurrentConversation] = useState(null);
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
+  const [incomingMessage, setIncomingMessage] = useState("");
   const scrollRef = useRef();
+  const socket = useRef();
+
+  useEffect(() => {
+    socket.current = io('ws://localhost:3000')
+    socket.current.on('getMessage', (data) => {
+      setIncomingMessage({
+        sender: data.senderId,
+        content: data.content,
+        createdAt: Date.now()
+      })
+    })
+  },[]);
+
+  useEffect(() => {
+    incomingMessage && 
+      currentConversation?.participants.includes(incomingMessage.sender) && 
+      setMessages(prev =>[...prev, incomingMessage])
+  },[incomingMessage, currentConversation]);
+
+  useEffect(() => {
+    socket.current.emit('connectUser', user._id);
+    socket.current.on('getUsers', (users) => {
+      console.log(users);
+    })
+  },[user]);
 
   useEffect(() => {
     const fetchConversations = async () => {
@@ -48,7 +75,15 @@ export default function Messenger() {
       conversationId: currentConversation._id,
       senderId: user._id,
       content: newMessage
-    }
+    };
+
+    const receiverId = currentConversation.participants.find(participant => participant !== user._id);
+    
+    socket.current.emit('sendMessage', {
+      senderId: user._id,
+      receiverId: receiverId,
+      content: newMessage
+    })
     try {
       const res = await axios.post('/api/messages', message);
       setMessages([...messages, res.data]);
@@ -71,7 +106,7 @@ export default function Messenger() {
                   <Conversation 
                     conversation={ conversation }
                     currentUser={ user }
-                    key={conversation._id}
+                    key={ conversation._id }
                   />
                 </div>
               );
