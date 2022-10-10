@@ -19,13 +19,13 @@
   justify-content: center;
 }
 
-.logo-title {
+/* .register-logo-title {
   margin: 0 0 8px 0;
-  text-align: center; /*might remove*/
+  text-align: center; 
   font-size: 3.5rem;
   font-weight: 800;
   color: crimson;
-}
+} */
 
 .logo-subtitle {
   text-align: center; /*might remove*/
@@ -36,7 +36,8 @@
 .register-form {
   height: 400px;
   padding: 20px;
-  border-radius: 8px; 
+  border-bottom-left-radius: 8px; 
+  border-bottom-right-radius: 8px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
