@@ -18,7 +18,7 @@ export default function Messenger() {
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io('ws://localhost:3000')
+    socket.current = io('https://rpg-messenger.herokuapp.com'||'ws://localhost:3000');
     socket.current.on('getMessage', (data) => {
       setIncomingMessage({
         sender: data.senderId,
