@@ -71,33 +71,35 @@ export default function Messenger() {
 
   const handleSend = async (event) => {
     event.preventDefault();
-    const message = {
-      conversationId: currentConversation._id,
-      senderId: user._id,
-      content: newMessage
+    if (newMessage) {
+      const message = {
+        conversationId: currentConversation._id,
+        senderId: user._id,
+        content: newMessage
+      };
+  
+      const receiverId = currentConversation.participants.find(participant => participant !== user._id);
+      
+      socket.current.emit('sendMessage', {
+        senderId: user._id,
+        receiverId: receiverId,
+        content: newMessage
+      })
+      try {
+        const res = await axios.post('/api/messages', message);
+        setMessages([...messages, res.data]);
+        setNewMessage('');
+      } catch (err) {
+        console.error(err);
+      }
     };
-
-    const receiverId = currentConversation.participants.find(participant => participant !== user._id);
-    
-    socket.current.emit('sendMessage', {
-      senderId: user._id,
-      receiverId: receiverId,
-      content: newMessage
-    })
-    try {
-      const res = await axios.post('/api/messages', message);
-      setMessages([...messages, res.data]);
-      setNewMessage('');
-    } catch (err) {
-      console.error(err);
-    }
-  }
+  };
 
   return (
     <div className='messenger'>
-      <div className='chat-menu'>
-        <div className='chat-menu-wrapper'>
-          <input className='chat-menu-search' type='text' placeholder="Search Friends.." />
+      <div className='conversations-menu'>
+        <div className='conversations-menu-wrapper'>
+          <h1 className='conversations-menu-title'>Friends List</h1>
             {conversations.map((conversation) => {
               return (
                 <div onClick = {() => {
@@ -135,6 +137,7 @@ export default function Messenger() {
                   onChange={(event) => setNewMessage(event.target.value)}
                   value={ newMessage }
                 ></textarea>
+                <div className="bottombar"></div>
                 <button 
                   className='chat-box-submit'
                   onClick={ handleSend }

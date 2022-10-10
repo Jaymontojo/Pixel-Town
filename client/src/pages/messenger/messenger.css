@@ -3,35 +3,39 @@
   display: flex;
 } 
 
-.chat-menu {
-  flex: 2;
-  background-color: aqua;
+.conversations-menu {
+  flex: 3;
+  background-color: rgb(0, 0, 0);
 }
 
-.chat-menu-search {
+.conversations-menu-wrapper {
+  padding: 16px 0;
+}
+
+.conversations-menu-title {
   width: 90%;
   padding: 8px 0 0 0 ;
+  margin: 0 0 16px 0;
   border: none;
-  background-color: aqua;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 3px solid aliceblue;
+  text-align: center;
+  font-size:  3rem;
+  font-weight: 900;
+  color: aliceblue;
 }
 
 .chat-box {
   flex: 8;
-  background-color: coral;
+  background-image: url('../../../public/assets/message-container-bg.jpg');
 }
-
 .chat-box-wrapper {
-  height: 94%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
 }
 
-
 .chat-box-top {
-  padding: 0 8px 0 0;
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -41,44 +45,59 @@
 }
 
 .chat-box-bottom {
-  margin: 8px 0 0 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.539);
 }
 
 .chat-box-textarea {
   width: 80%;
-  width: 90%;
+  height: 25%;
   padding: 8px;
+  margin: 0 0 0 16px;
   border: none;
+  border-bottom: 5px solid aliceblue;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+  font-size:  1.5rem;
+  color: aliceblue;
 }
-
-.chat-box-submit {
-  width: 70px;
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  background-color: brown;
+.chat-box-textarea::placeholder {
+  opacity: 55%;
+  font-size:  1.5rem;
   color: aliceblue;
 }
 
-.chat-online {
-  flex: 3;
-  background-color: rgb(250, 250, 58);
+.chat-box-textarea::-webkit-scrollbar {
+  display: none;
 }
 
-.chat-menu-wrapper, 
-.chat-box-wrapper, 
-.chat-online-wrapper {
-  padding: 16px;
+.chat-box-submit {
+  width: 20%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  font-size:  3rem;
+  font-weight: 900;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.chat-box-submit:hover {
+  border: 5px solid aliceblue;
+  border-radius: 8px;
+  background-color: transparent;
 }
 
 .chat-null-span {
-  position: absolute;
   top: 25%;
-  font-size: 4rem;
-  color: grey;
+  position: absolute;
   text-align: center;
+  font-size: 4rem;
+  color: rgb(246, 8, 8);
   cursor: default;
 }
