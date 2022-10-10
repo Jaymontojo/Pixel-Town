@@ -8,17 +8,17 @@ import { AuthContext } from '../../context/AuthContext';
 
 export default function Messenger() {
   const { user } = useContext(AuthContext);
-
   const [conversations, setConversations] = useState([]);
   const [currentConversation, setCurrentConversation] = useState(null);
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
   const [incomingMessage, setIncomingMessage] = useState("");
+  const ENDPOINT = 'https://rpg-messenger.herokuapp.com'||'ws://localhost:3000';
   const scrollRef = useRef();
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io('https://rpg-messenger.herokuapp.com'||'ws://localhost:3000');
+    socket.current = io(ENDPOINT);
     socket.current.on('getMessage', (data) => {
       setIncomingMessage({
         sender: data.senderId,
@@ -26,7 +26,7 @@ export default function Messenger() {
         createdAt: Date.now()
       })
     })
-  },[]);
+  },[ENDPOINT]);
 
   useEffect(() => {
     incomingMessage && 

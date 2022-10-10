@@ -8,7 +8,7 @@ const userRoutes = require('./routes/users');
 const authRoutes = require('./routes/auth');
 const conversationRoutes = require('./routes/conversations');
 const messageRoutes = require('./routes/messages');
-
+const cors = require('cors');
 function setupServer () {
   const app = express();
   const server = http.createServer(app);
@@ -17,6 +17,7 @@ function setupServer () {
   //middleware
   app.use(express.static(path.resolve(__dirname, '../client/build')));
   app.use(express.json());
+  app.use(cors());
   app.use(helmet());
   app.use(morgan('common'));
   app.use('/api/users', userRoutes);
