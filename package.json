@@ -7,7 +7,7 @@
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
     "concurrent": "concurrently \"npm run dev\" \"cd client && npm start\"",
-    "build": "cd client && npm install && npm run build",
+    "build": "npm install && cd client && npm install && npm run build",
     "release": "standard-version"
   },
   "author": "",
