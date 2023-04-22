@@ -17,7 +17,7 @@ function setupServer () {
   //middleware
   app.use(express.static(path.resolve(__dirname, '../client/build')));
   app.use(express.json());
-  app.use(cors());
+  app.use(cors({origin: '*'}));
   app.use(helmet());
   app.use(morgan('common'));
   app.use('/api/users', userRoutes);
